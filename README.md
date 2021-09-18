@@ -1,5 +1,5 @@
 # wsdc_devathon
-Creating an online reporting module for M.Tech students
+Creating an online reporting module for M.Tech students --WSDC
 
 Team Members :-
 Rakesh Das
