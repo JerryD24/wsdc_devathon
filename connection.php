@@ -2,9 +2,9 @@
   $uname="root";
   $pass="";
   $server="localhost";
-  $db="db";
+  $db="wsdc_db";
   $con = mysqli_connect($server,$uname,$pass,$db);
   if(!$con)
-  echo die(mysqli_connect_error());
+  header('location:landing page.html');
 
 ?>

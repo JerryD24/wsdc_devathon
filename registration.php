@@ -3,18 +3,27 @@
   if(isset($_POST['submit']))
 {
   $nm=$_POST['name'];
-  $mail=$_POST['mail'];
-  $ps=$_POST['pass'];
-  $cps=$_POST['cpass'];
-  if($ps==$cps)
-  {
-    $inqry="INSERT INTO db(name, mail, pass) VALUES ('$nm','$mail','$pass')";
+  $adhar=$_POST['adhar'];
+  $address=$_POST['address'];
+  $gender=$_POST['gender'];
+  $depart=$_POST['department'];
+  $specialization=$_POST['specialization'];
+  $category=$_POST['category'];
+  $pwd=$_POST['PWD'];
+  $date=$_POST['date'];
+  $notes=$_POST['notes'];
+  $docs=$_POST['docs'];
+  $image=$_POST['image'];
+
+  $stat_check="SELECT stat_app FROM wsdc_table";
+  
+  if(!$stat_check){
+  $inqry="INSERT INTO wsdc_table(name,adhar,address,gender,department,specialization,category,PWD,date,notes,docs,image,app_stat) VALUES ('$nm','$adhar','$address','gender','depart','specialization','category','pwd','date','notes','docs','image','true')";
   mysqli_query($con,$inqry);
-  echo "success";
-  header('location:index.php');
+  $change_stat="UPDATE wsdc_table SET stat_app='true'";
+  mysqli_query($con,$change_stat);
   }
   else
-  echo "pass dont match";
-
-}
+  header('location:landing page.html');
+  }
   ?>
