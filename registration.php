@@ -13,19 +13,20 @@
   $date=$_POST['date'];
   $notes=$_POST['notes'];
   $docs=$_POST['docs'];
-  $image=$_POST['image'];
+  // $image=$_POST['image'];
 
-  $stat_check="SELECT stat_app FROM wsdc_table";     //aaaaaa
-  mysqli_query($con,$stat_check);
+  $stat_check="SELECT * FROM wsdc_table";     //aaaaaa
+  $aaa=mysqli_query($con,$stat_check);
+  $result=mysqli_fetch_array($aaa);
   
-  if(!$stat_check){
-  $inqry="INSERT INTO wsdc_table(name,adhar,address,gender,department,specialization,category,PWD,date,notes,docs,image,app_stat) VALUES ('$nm','$adhar','$address','$gender','$depart','$specialization','$category','$pwd','$date','$notes','$docs','$image','true')";
+  if(!$result['stat_app']){
+  $inqry="INSERT INTO wsdc_table(name,adhar,address,gender,department,specialization,category,PWD,date,notes,docs,app_stat) VALUES ('$nm','$adhar','$address','$gender','$depart','$specialization','$category','$pwd','$date','$notes','$docs','true')";
   mysqli_query($con,$inqry);
-  $change_stat="UPDATE wsdc_table SET stat_app='true'";
-  mysqli_query($con,$change_stat);
-  header('location:index.html');
+  header('location:show.php');
   }
-  else
-  header('location:landing page.html');
+  else{
+    echo "User Already Exists";
+  //header('location:index.html');
+  }
   }
   ?>

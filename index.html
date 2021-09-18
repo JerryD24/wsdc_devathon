@@ -9,21 +9,12 @@
     <body>
         <div class="wrapper">
             <div class="title-text">
-                <div class="title login">
-                    Student</div>
+                
                 <div class="title signup">
                     Administrator</div>
             </div>
 
-            <div class="form-container">
-                <div class="slide-controls">
-                    <input type="radio" name="slide" id="login" checked>
-                    <input type="radio" name="slide" id="signup">
-                    <label for="login" class="slide login">Student</label>
-                    <label for="signup" class="slide signup">Administrator</label>
-                <div class="slider-tab">
-                </div>
-                </div>
+            
                 <div class="form-inner">
                     <form action="login.php" class="login">
                         <div class="field">
@@ -40,32 +31,13 @@
                             </div>
                             <input type="submit" value="Enter">
                         </div>
-                        <div class="signup-link">
-                            Not registered yet?
-                            <a href="studentpage.html">Signup Now</a>
-                        </div>
-                    </form>
-                    <form action="#" class="signup">
-                        <div class="field">
-                            <input type="text" placeholder="Email Address" required>
-                        </div>
-                        <div class="field">
-                            <input type="password" placeholder="Password" required>
-                        </div>
-                        <div class="pass-link">
-                            <a href="#">Forgot password?</a>
-                        </div>
-                        <div class="field btn">
-                            <div class="btn-layer">
-                            </div>
-                            <input type="submit" value="Enter">
-                        </div>
+                        <a href="studentpage.html">Student Register</a>
                     </form>
                 </div>
             </div>
         </div>
 
-        <script>
+        <!-- <script>
             const loginText = document.querySelector(".title-text .login");
             const loginForm = document.querySelector("form.login");
             const loginBtn = document.querySelector("label.login");
@@ -79,7 +51,7 @@
             loginForm.style.marginLeft = "0%";
             loginText.style.marginLeft = "0%";
             });
-        </script>
+        </script> -->
 
     </body>
 </html>

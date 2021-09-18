@@ -16,19 +16,19 @@
                 </div>
                     <p>
                         <span class="wpcf7-form-control-wrap Name">
-                            <input type="text" name="Name" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name">
+                            <input type="text" name="name" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name">
                         </span>
 
                         <span class="wpcf7-form-control-wrap Name">
-                            <input type="text" name="Aadhaar" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Aadhaar Number">
+                            <input type="text" name="adhar" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Aadhaar Number">
                         </span>
 
                         <span class="wpcf7-form-control-wrap Name">
-                            <input type="text" name="Address" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Address">
+                            <input type="text" name="address" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Address">
                         </span>
 
                         <span class="wpcf7-form-control-wrap Subject flat">
-                            <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                            <select name="gender" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
                             <option value="Gender">Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -37,7 +37,7 @@
                         </span>
 
                         <span class="wpcf7-form-control-wrap Subject flat">
-                            <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                            <select name="department" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
                             <option value="Department">Department</option>
                             <option value="xxx">xxx</option>
                             <option value="yyy">yyy</option>
@@ -46,7 +46,7 @@
                         </span>
 
                         <span class="wpcf7-form-control-wrap Subject flat">
-                            <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                            <select name="specialization" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
                             <option value="Specialization">Specialization</option>
                             <option value="xxx">xxx</option>
                             <option value="yyy">yyy</option>
@@ -55,7 +55,7 @@
                         </span>
 
                         <span class="wpcf7-form-control-wrap Subject flat">
-                            <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                            <select name="category" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
                             <option value="Category">Category</option>
                             <option value="general">General</option>
                             <option value="sc">SC</option>
@@ -65,7 +65,7 @@
                         </span>
 
                         <span class="wpcf7-form-control-wrap Subject flat">
-                            <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                            <select name="PWD" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
                             <option value="pwd">PWD?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -73,37 +73,35 @@
                         </span>
                         
                         <span class="wpcf7-form-control-wrap Subject flat">
-                        <form action="/action_page.php">
+                        
                             <label for="birthday">Date of Birth</label>
-                            <input type="date" id="birthday" name="birthday">
-                        </form>
+                            <input type="date" id="birthday" name="date">
                         </span>
 
                         <span class="wpcf7-form-control-wrap Message">
-                            <textarea name="Notes" cols="45" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Notes"></textarea>
+                            <textarea name="notes" cols="45" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Notes"></textarea>
                         </span>
 
                         <div class="file-input">
-                            <input type="file" id="file" class="file">
+                            <input type="file" id="file" class="file" name="docs">
                             <label for="file">
                               Select Document
                               <p class="file-name"></p>
                             </label>
                         </div>
-
+<!-- 
                         <div class="image-input">
-                            <input type="image" id="image" class="image">
+                            <input type="image" id="image" name="image">
                             <label for="image">
                               Select Image
-                              <p class="image-name"></p>
                             </label>
-                        </div>
+                        </div> -->
 
-                        <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit btn">
-                        <img class="ajax-loader" src="http://www.jordancundiff.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
+                        <input style="padding: 15px;color:white; background-color: blueviolet; border-radius: 0.5px;" type="submit" value="Send" name="submit" >
+                        <!-- <img class="ajax-loader" src="http://www.jordancundiff.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;"> -->
                     </p>
-                <div class="wpcf7-response-output wpcf7-display-none">
-            </div>
+                <!-- <div class="wpcf7-response-output wpcf7-display-none">
+            </div> -->
         </form>
         </div>
     </body>
