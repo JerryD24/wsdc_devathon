@@ -6,5 +6,4 @@
   $con = mysqli_connect($server,$uname,$pass,$db);
   if(!$con)
   header('location:landing page.html');
-
 ?>
