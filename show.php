@@ -1,4 +1,14 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>your data</h2>
+  <?php
   include "./connection.php";
 
   if(isset($_POST['submit']))
@@ -15,18 +25,9 @@
       else
       {
         $data=mysqli_fetch_array($qry);
-      }  
+      }
+    }     
   ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h2>your data</h2>
   <p>
     <h4>Name:<?php echo $data["name"];?></h4><br>
     <h4>Adhar:<?php echo $data["adhar"];?></h4><br>
