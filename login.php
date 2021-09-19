@@ -5,16 +5,22 @@
 {
   $mail=$_POST['mail'];
   $ps=$_POST['pass'];
-    $selqry="select * from db";
+
+    $selqry="select * from admin_table where email=$mail";
     $qry=mysqli_query($con,$selqry);
     $count=mysqli_num_rows($qry);
-    if(!$count)
+    if(!$count){
     echo "Incorrect data";
+    header('location:index.html');}
     else
     {
       $res=mysqli_fetch_array($qry);
-      $_SESSION['data']=$res;
-      header('location:show.php');
+      if($res['password']==$ps){
+        $_SESSION['admin']=1;
+        echo "inside admin";
+      header('location:admin.php');}
+      else
+      header('location:index.html');
     }
 
 }
