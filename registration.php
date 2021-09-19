@@ -22,7 +22,7 @@
   if(!$result['stat_app']){
   $inqry="INSERT INTO wsdc_table(name,adhar,address,gender,department,specialization,category,PWD,date,notes,docs,app_stat) VALUES ('$nm','$adhar','$address','$gender','$depart','$specialization','$category','$pwd','$date','$notes','$docs','true')";
   mysqli_query($con,$inqry);
-  header('location:show.php');
+  header('location:index.html');
   }
   else{
     echo "User Already Exists";

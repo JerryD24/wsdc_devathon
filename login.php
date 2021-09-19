@@ -6,12 +6,12 @@
   $mail=$_POST['mail'];
   $ps=$_POST['pass'];
 
-    $selqry="select * from admin_table where email=$mail";
+    $selqry="SELECT * FROM admin_table WHERE email='$mail'";
     $qry=mysqli_query($con,$selqry);
     $count=mysqli_num_rows($qry);
     if(!$count){
     echo "Incorrect data";
-    header('location:index.html');}
+    }
     else
     {
       $res=mysqli_fetch_array($qry);

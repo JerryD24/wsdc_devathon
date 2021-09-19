@@ -16,12 +16,12 @@
 
             
                 <div class="form-inner">
-                    <form action="login.php" class="login">
+                    <form action="login.php" class="login" method="post" >
                         <div class="field">
-                            <input type="text" placeholder="Email Address" required>
+                            <input type="text" placeholder="Email Address" name="mail" required>
                         </div>
                         <div class="field">
-                            <input type="password" placeholder="Password" required>
+                            <input type="password" placeholder="Password" name="pass" required>
                         </div>
                         <div class="pass-link">
                             <a href="#">Forgot password?</a>
@@ -29,7 +29,7 @@
                         <div class="field btn">
                             <div class="btn-layer">
                             </div>
-                            <input type="submit" value="Enter">
+                            <input type="submit" value="Enter" name="submit">
                         </div>
                         <a href="studentpage.html">Student Register</a>
                     </form>
