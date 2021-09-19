@@ -1,38 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <form method="POST">
-    Enter name<input type="text" required="true" name="name"><br>
-    Enter mail<input type="email" required="true" name="mail"><br>
-    Enter pass<input type="password" required="true" name="pass"><br>
-    confirm pass<input type="password" required="true" name="cpass"><br>
-    <input type="submit" name="submit" value="submit">
-  </form>
-  <?php
+<?php
   include "./connection.php";
   if(isset($_POST['submit']))
 {
   $nm=$_POST['name'];
-  $mail=$_POST['mail'];
-  $ps=$_POST['pass'];
-  $cps=$_POST['cpass'];
-  if($ps==$cps)
-  {
-    $inqry="INSERT INTO db(name, mail, pass) VALUES ('$nm','$mail','$pass')";
-  mysqli_query($con,$inqry);
-  echo "success";
-  header('location:index.php');
-  }
-  else
-  echo "pass dont match";
+  $adhar=$_POST['adhar'];
+  $address=$_POST['address'];
+  $gender=$_POST['gender'];
+  $depart=$_POST['department'];
+  $specialization=$_POST['specialization'];
+  $category=$_POST['category'];
+  $pwd=$_POST['PWD'];
+  $date=$_POST['date'];
+  $notes=$_POST['notes'];
+  $docs=$_POST['docs'];
+  // $image=$_POST['image'];
 
-}
+  $stat_check="SELECT * FROM wsdc_table";     //aaaaaa
+  $aaa=mysqli_query($con,$stat_check);
+  $result=mysqli_fetch_array($aaa);
+  
+  if(!$result['stat_app']){
+  $inqry="INSERT INTO wsdc_table(name,adhar,address,gender,department,specialization,category,PWD,date,notes,docs,app_stat) VALUES ('$nm','$adhar','$address','$gender','$depart','$specialization','$category','$pwd','$date','$notes','$docs','true')";
+  mysqli_query($con,$inqry);
+  header('location:show.php');
+  }
+  else{
+    echo "User Already Exists";
+  //header('location:index.html');
+  }
+  }
   ?>
-</body>
-</html>
