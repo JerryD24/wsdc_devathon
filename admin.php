@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if($_SESSION['admin']!=1){
-    header('location:index.html');
-}
+// if($_SESSION['admin']!=1){
+//     header('location:index.html');
+// }
 ?>
 
 
